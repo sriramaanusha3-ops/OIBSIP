@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Calculator</title>
+    <meta name="description" content="A modern vanilla JS calculator with dark/light mode, keyboard support, and smooth animations." />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <div class="ambient a1"></div>
+      <div class="ambient a2"></div>
+
+      <div class="shell">
+        <header class="topbar">
+          <div>
+            <h1>Nova</h1>
+            <p>Modern calculator</p>
+          </div>
+          <button id="themeToggle" class="theme-btn" aria-label="Toggle theme" type="button">
+            <span id="themeIcon">☾</span>
+          </button>
+        </header>
+
+        <section class="calculator" aria-label="Calculator">
+          <div class="display" id="display">
+            <div class="expr" id="expr" aria-live="polite"></div>
+            <div class="current" id="current" aria-live="polite">0</div>
+          </div>
+
+          <div class="keys">
+            <button class="key fn" data-action="clear">C</button>
+            <button class="key fn" data-action="sign">±</button>
+            <button class="key fn" data-action="percent">%</button>
+            <button class="key op" data-op="÷" aria-label="Divide">÷</button>
+
+            <button class="key num" data-digit="7">7</button>
+            <button class="key num" data-digit="8">8</button>
+            <button class="key num" data-digit="9">9</button>
+            <button class="key op" data-op="×" aria-label="Multiply">×</button>
+
+            <button class="key num" data-digit="4">4</button>
+            <button class="key num" data-digit="5">5</button>
+            <button class="key num" data-digit="6">6</button>
+            <button class="key op" data-op="−" aria-label="Subtract">−</button>
+
+            <button class="key num" data-digit="1">1</button>
+            <button class="key num" data-digit="2">2</button>
+            <button class="key num" data-digit="3">3</button>
+            <button class="key op" data-op="+" aria-label="Add">+</button>
+
+            <button class="key num span-2" data-digit="0">0</button>
+            <button class="key num" data-digit=".">.</button>
+            <button class="key fn" data-action="back" aria-label="Backspace">⌫</button>
+
+            <button class="key eq span-4" data-action="equals" aria-label="Equals">=</button>
+          </div>
+        </section>
+
+        <p class="hint">Keyboard: numbers, + − * / , Enter = , Backspace, Esc to clear</p>
+      </div>
+    </main>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
